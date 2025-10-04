@@ -1,5 +1,5 @@
 import { EdmondsSection } from "./components/edmondsSection";
-import {About} from "./components/about";
+import { About } from "./components/about";
 import { Contact } from "./components/Contact";
 import Gallery from "./components/gallery";
 
