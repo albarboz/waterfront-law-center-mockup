@@ -7,7 +7,7 @@ import Gallery from "./components/gallery";
 
 import ferryPhoto from "./assets/edmonds-ferry.jpg";
 
-// --- REUSABLE COMPONENTS ----------------------------------------------------
+// -- REUSABLE COMPONENTS ----------------------------------------------------
 
 /**
  * A styled, reusable button with a ferry-themed accent color.
