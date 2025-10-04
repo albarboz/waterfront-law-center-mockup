@@ -4,7 +4,7 @@ import { EdmondsSection } from "./components/edmondsSection.jsx";
 import About from "./components/about.jsx";
 import { Contact } from "./components/Contact.jsx";
 
-import Gallery from "../src/components/gallery.jsx";
+import Gallery from "./components/gallery.jsx";
 import ferryPhoto from "./assets/edmonds-ferry.jpg";
 
 // --- REUSABLE COMPONENTS ----------------------------------------------------
