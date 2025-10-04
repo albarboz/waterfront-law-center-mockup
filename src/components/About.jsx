@@ -1,6 +1,6 @@
 import aboutPhoto from "../assets/bolingallery(1).jpg";
 
-export default function About() {
+export const About = () => {
   return (
     <div className="grid grid-cols-1 items-start gap-y-10 gap-x-12 lg:grid-cols-12">
       

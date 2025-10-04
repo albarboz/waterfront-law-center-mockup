@@ -1,10 +1,8 @@
-import { useState } from "react";
+import { EdmondsSection } from "./components/edmondsSection";
+import {About} from "./components/about";
+import { Contact } from "./components/Contact";
+import Gallery from "./components/gallery";
 
-import { EdmondsSection } from "./components/edmondsSection.jsx";
-import About from "./components/about.jsx";
-import { Contact } from "./components/Contact.jsx";
-
-import Gallery from "./components/gallery.jsx";
 import ferryPhoto from "./assets/edmonds-ferry.jpg";
 
 // --- REUSABLE COMPONENTS ----------------------------------------------------
