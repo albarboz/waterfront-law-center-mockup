@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { EdmondsSection } from "./components/edmondsSection";
 import { About } from "./components/about";
 import { Contact } from "./components/Contact";
