@@ -4,13 +4,8 @@ import { EdmondsSection } from "./components/edmondsSection";
 import { About } from "./components/about";
 import { Contact } from "./components/Contact";
 import Gallery from "./components/gallery";
+import ferryPhoto from "./assets/edmonds-ferry.webp"
 
-import ferryPhoto from "./assets/edmonds-ferry.jpg?imagetools&width=800&format=jpeg";
-// -- REUSABLE COMPONENTS ----------------------------------------------------
-
-/**
- * A styled, reusable button with a ferry-themed accent color.
- */
 const Button = ({ href = "#", children, className = "", type = "button" }) => (
   <a
     href={href}
@@ -123,7 +118,6 @@ const Navbar = () => {
  */
 const Img = ({ alt, sizes, width, height, className = "" }) => (
   <img
-    loading="eager" // Force eager loading for the hero image
     alt={alt}
     src={ferryPhoto}
     sizes={sizes}
