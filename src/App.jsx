@@ -125,8 +125,7 @@ const Img = ({ alt, src, srcSet, sizes, width, height, className = "" }) => (
   <img
     loading="lazy"
     alt={alt}
-    src={src}
-    srcSet={srcSet}
+    src={ferryPhoto}
     sizes={sizes}
     width={width}
     height={height}
