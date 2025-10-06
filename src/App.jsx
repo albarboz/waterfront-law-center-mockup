@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { Suspense, useState } from "react";
 
 import { EdmondsSection } from "./components/edmondsSection";
 import { About } from "./components/about";
@@ -15,7 +15,6 @@ import ferryPhoto from "./assets/edmonds-ferry.jpg";
 const Button = ({ href = "#", children, className = "", type = "button" }) => (
   <a
     href={href}
-    type={type}
     className={`inline-block rounded-md bg-teal-800 px-6 py-3 text-base font-semibold text-white shadow-sm transition-transform duration-200 ease-in-out hover:scale-105 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-offset-2 ${className}`}
   >
     {children}
@@ -72,7 +71,8 @@ const Navbar = () => {
         <button
           className="group inline-flex h-12 w-12 items-center justify-center rounded-lg md:hidden"
           onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
         >
           <svg
             className="h-6 w-6 stroke-slate-700 group-hover:stroke-teal-700"
@@ -122,12 +122,17 @@ const Navbar = () => {
 /**
  * An image component with lazy loading enabled by default.
  */
-const Img = ({ alt, src, className = "" }) => (
+const Img = ({ alt, src, srcSet, sizes, width, height, className = "" }) => (
   <img
     loading="lazy"
     alt={alt}
     src={src}
-    className={`h-auto w-full ${className}`}
+    srcSet={srcSet}
+    sizes={sizes}
+    width={width}
+    height={height}
+    className={`w-full ${className}`}
+    style={width && height ? undefined : { aspectRatio: "16/9" }}
   />
 );
 
@@ -183,7 +188,11 @@ export default function App() {
         </header>
 
         {/* About & Amenities */}
-        <Section id="about" title="About the Waterfront Law Center" className="bg-white">
+        <Section
+          id="about"
+          title="About the Waterfront Law Center"
+          className="bg-white"
+        >
           <About />
         </Section>
 
@@ -203,7 +212,7 @@ export default function App() {
         </Section>
       </main>
 
-      {/* Footer */}  
+      {/* Footer */}
       <footer className="border-t bg-slate-200">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-8 text-center text-sm text-slate-600 md:flex-row md:text-left">
           <p>

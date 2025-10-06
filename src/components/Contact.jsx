@@ -1,4 +1,4 @@
-export const Contact =  () =>  {
+ export const Contact =  () =>  {
     return (
          <div className="grid gap-12 md:grid-cols-2">
             {/* Left Side: Contact Info */}

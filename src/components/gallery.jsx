@@ -1,20 +1,18 @@
-import { useState, useEffect } from 'react';
-import g1 from "../assets/bolingallery(1).jpg";
-import g2 from "../assets/bolingallery(2).jpg";
-import g3 from "../assets/bolingallery(3).jpg";
-import g4 from "../assets/bolingallery(4).jpg";
-import g5 from "../assets/bolingallery(5).jpg";
-import g6 from "../assets/bolingallery(6).jpg";
-import g7 from "../assets/bolingallery(7).jpg";
-import g8 from "../assets/bolingallery(8).jpg";
-import g9 from "../assets/bolingallery(9).jpg";
+import { useState, useEffect } from "react";
+import g1 from "../assets/bolingallery(1).jpg?imagetools&width=800&format=webp";
+import g2 from "../assets/bolingallery(2).jpg?imagetools&width=800&format=webp";
+import g3 from "../assets/bolingallery(3).jpg?imagetools&width=800&format=webp";
+import g4 from "../assets/bolingallery(4).jpg?imagetools&width=800&format=webp";
+import g5 from "../assets/bolingallery(5).jpg?imagetools&width=800&format=webp";
+import g6 from "../assets/bolingallery(6).jpg?imagetools&width=800&format=webp";
+import g7 from "../assets/bolingallery(7).jpg?imagetools&width=800&format=webp";
+import g8 from "../assets/bolingallery(8).jpg?imagetools&width=800&format=webp";
+import g9 from "../assets/bolingallery(9).jpg?imagetools&width=800&format=webp";
 
 const images = [g1, g2, g3, g4, g5, g6, g7, g8, g9];
 
-
-
 export default function Gallery() {
-     const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   // Function to open the modal with the clicked image
   const openModal = (src) => {
@@ -29,13 +27,13 @@ export default function Gallery() {
   // Optional: Add an effect to close the modal when the 'Escape' key is pressed
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape') {
+      if (e.key === "Escape") {
         closeModal();
       }
     };
-    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
     return () => {
-      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
 
@@ -51,6 +49,7 @@ export default function Gallery() {
             <img // Using a standard <img> tag for clarity
               alt={`Gallery image ${i + 1}`}
               src={src}
+              loading="lazy" // Lazy-load images
               className="aspect-[4/3] w-full object-cover"
             />
           </figure>
@@ -70,6 +69,8 @@ export default function Gallery() {
             <img
               alt="Full-screen view"
               src={selectedImage}
+                loading="lazy" // Lazy-load images
+
               className="max-h-[90vh] w-auto object-contain rounded-lg"
             />
 
