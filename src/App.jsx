@@ -5,7 +5,7 @@ import { About } from "./components/about";
 import { Contact } from "./components/Contact";
 import Gallery from "./components/gallery";
 
-import ferryPhoto from "./assets/edmonds-ferry.jpg";
+import ferryPhoto from "./assets/edmonds-ferry.jpg?imagetools&width=800&format=webp";
 
 // -- REUSABLE COMPONENTS ----------------------------------------------------
 
