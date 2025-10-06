@@ -5,7 +5,7 @@ import { About } from "./components/about";
 import { Contact } from "./components/Contact";
 import Gallery from "./components/gallery";
 
-import ferryPhoto from "./assets/edmonds-ferry.jpg?imagetools&width=800&format=jpeg"
+import ferryPhoto from "./assets/edmonds-ferry.jpg?imagetools&width=800&format=jpeg";
 // -- REUSABLE COMPONENTS ----------------------------------------------------
 
 /**
@@ -121,9 +121,9 @@ const Navbar = () => {
 /**
  * An image component with lazy loading enabled by default.
  */
-const Img = ({ alt, src, srcSet, sizes, width, height, className = "" }) => (
+const Img = ({ alt, sizes, width, height, className = "" }) => (
   <img
-    loading="lazy"
+    loading="eager" // Force eager loading for the hero image
     alt={alt}
     src={ferryPhoto}
     sizes={sizes}
